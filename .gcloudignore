@@ -1,0 +1,8 @@
+.git
+.gitignore
+.build/
+.swiftpm/
+.DS_Store
+.env
+Web/node_modules/
+Web/.vite/

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <script>
+      try {
+        var storedScheme = localStorage.getItem("color-scheme");
+        var metaScheme = document.querySelector('meta[name="color-scheme"]');
+        if (metaScheme) metaScheme.content = storedScheme ?? "light dark";
+        var isDark = storedScheme
+          ? storedScheme === "dark"
+          : window.matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.classList.toggle("dark", isDark);
+      } catch (_) {}
+    </script>
+    <title>EDGAR Deal &amp; Market Trends Observatory — Form S-1 Corpus (2020–2026)</title>
+    <meta
+      name="description"
+      content="Form S-1 and S-1/A daily filings, gross proceeds, underwriters, counsel, unit coverage, and exhibits (2020–2026)."
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..600&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <script id="dataset-jsonld" type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Dataset",
+        "name": "EDGAR Form S-1 & S-1/A Cover-Page Terms & Exhibits (2020–2026)",
+        "description": "Cover-page offering proceeds, underwriters, issuer and underwriter counsel, named partners, unit coverage, and exhibits across 2020–2026 Form S-1 filings.",
+        "temporalCoverage": "2020-01-01/2026-12-31",
+        "isAccessibleForFree": true,
+        "license": "https://www.sec.gov/privacy#dissemination",
+        "creator": {
+          "@type": "Organization",
+          "name": "Advocates Close",
+          "url": "https://spac.advocatesclose.nyc"
+        },
+        "keywords": [
+          "SEC Form S-1",
+          "SPAC IPO Market Trends",
+          "SIC 6770 Blank Checks",
+          "Underwriters",
+          "Unit Coverage",
+          "Counsel",
+          "EDGAR Exhibits"
+        ],
+        "distribution": [
+          {
+            "@type": "DataDownload",
+            "encodingFormat": "application/json",
+            "contentUrl": "/trends/dashboard"
+          },
+          {
+            "@type": "DataDownload",
+            "encodingFormat": "application/ld+json",
+            "contentUrl": "/schema/dataset.jsonld"
+          }
+        ]
+      }
+    </script>
+    <script type="module" crossorigin src="/assets/index-DlWpmENU.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/vendor-hIv0khJu.js">
+    <link rel="modulepreload" crossorigin href="/assets/echarts-DeosSleY.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-B0-CaWzj.css">
+  </head>
+  <body class="bg-zinc-50 text-zinc-950 dark:bg-[#09090b] dark:text-zinc-50 antialiased selection:bg-blue-600/20 selection:text-blue-600 dark:selection:text-blue-300">
+    <div id="root"></div>
+  </body>
+</html>

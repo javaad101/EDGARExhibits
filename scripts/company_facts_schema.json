@@ -1,0 +1,22 @@
+[
+  {"name": "cik", "type": "STRING", "mode": "REQUIRED", "description": "10-digit zero-padded SEC Central Index Key"},
+  {"name": "cik_int", "type": "INTEGER", "mode": "REQUIRED", "description": "Integer SEC Central Index Key"},
+  {"name": "entity_name", "type": "STRING", "mode": "NULLABLE", "description": "SEC registrant entity name"},
+  {"name": "is_corpus_cik", "type": "BOOLEAN", "mode": "REQUIRED", "description": "True if registrant appears in the Form S-1 / SPAC corpus"},
+  {"name": "taxonomy", "type": "STRING", "mode": "REQUIRED", "description": "XBRL taxonomy namespace (us-gaap, dei, spac, ffd, ifrs-full, srt)"},
+  {"name": "concept", "type": "STRING", "mode": "REQUIRED", "description": "XBRL concept tag name"},
+  {"name": "label", "type": "STRING", "mode": "NULLABLE", "description": "Human-readable XBRL concept label"},
+  {"name": "unit", "type": "STRING", "mode": "REQUIRED", "description": "Unit of measure (USD, shares, USD/shares, pure, etc.)"},
+  {"name": "val", "type": "FLOAT", "mode": "NULLABLE", "description": "Numeric XBRL fact value"},
+  {"name": "val_str", "type": "STRING", "mode": "NULLABLE", "description": "Non-numeric XBRL fact value when text"},
+  {"name": "start_date", "type": "DATE", "mode": "NULLABLE", "description": "Reporting period start date (NULL for instant facts)"},
+  {"name": "end_date", "type": "DATE", "mode": "NULLABLE", "description": "Reporting period end date or instant date"},
+  {"name": "duration_days", "type": "INTEGER", "mode": "NULLABLE", "description": "Calendar days between start_date and end_date (NULL for instant facts)"},
+  {"name": "is_instant", "type": "BOOLEAN", "mode": "REQUIRED", "description": "True for balance-sheet / point-in-time facts without a start_date"},
+  {"name": "filed", "type": "DATE", "mode": "NULLABLE", "description": "SEC EDGAR filing date"},
+  {"name": "fy", "type": "INTEGER", "mode": "NULLABLE", "description": "Fiscal year reported"},
+  {"name": "fp", "type": "STRING", "mode": "NULLABLE", "description": "Fiscal period (FY, Q1, Q2, Q3, Q4)"},
+  {"name": "form", "type": "STRING", "mode": "NULLABLE", "description": "SEC form type (10-K, 10-Q, S-1, S-1/A, 8-K, 20-F, etc.)"},
+  {"name": "frame", "type": "STRING", "mode": "NULLABLE", "description": "SEC calendarized reporting frame (e.g. CY2026Q3I, CY2025)"},
+  {"name": "accn", "type": "STRING", "mode": "NULLABLE", "description": "SEC accession number"}
+]
